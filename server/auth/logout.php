@@ -18,12 +18,8 @@ if (isset($_SESSION['user_id'])) {
 
 // Destroy the session
 session_destroy();
-<<<<<<< HEAD
 
 // Redirect to login page
 header("Location: ../../client/auth/login.html");
-=======
-header("Location: ../../client/auth/login.php");
->>>>>>> upstream/main
 exit();
 ?>
