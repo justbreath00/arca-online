@@ -6,10 +6,10 @@ require_once __DIR__ . '/../../config/connect.php';
 if (isset($_SESSION['user_id'])) {
     $userId = $_SESSION['user_id'];
 
-    // Get current datetime with hours and minutes
+    // Get current datetime
     $currentTime = date('Y-m-d');
 
-    // Prepare and execute the update query to set last_logout or last_login time
+    // Prepare and execute the update query to set last_login time
     $stmt = $conn->prepare("UPDATE users SET last_login = ? WHERE user_id = ?");
     $stmt->bind_param("si", $currentTime, $userId);
     $stmt->execute();
@@ -18,12 +18,11 @@ if (isset($_SESSION['user_id'])) {
 
 // Destroy the session
 session_destroy();
-<<<<<<< HEAD
+
 
 // Redirect to login page
-header("Location: ../../client/auth/login.html");
-=======
 header("Location: ../../client/auth/login.php");
->>>>>>> upstream/main
+
+
 exit();
 ?>

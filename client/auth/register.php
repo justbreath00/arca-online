@@ -6,15 +6,13 @@
 <title>Signup - Arca</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo.png">
 <link rel="stylesheet" href="../assets/css/style.css">
-<<<<<<< HEAD:client/auth/register.php
-<<<<<<< HEAD
+
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-=======
+
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
->>>>>>> 479dbbcf1e5e4ee5942e6d7a0938ae3860b6c732
-=======
+
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
->>>>>>> ec7508091ec4ae51c75e9152cc3d8006b84052ea:client/auth/register.html
+
 </head>
 <div>
 <div class="glow-orb glow-orb-1"></div>
