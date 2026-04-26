@@ -24,5 +24,6 @@ session_destroy();
 header("Location: ../../client/auth/login.php");
 
 
+
 exit();
 ?>

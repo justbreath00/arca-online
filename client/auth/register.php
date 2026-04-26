@@ -7,12 +7,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo.png">
 <link rel="stylesheet" href="../assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
 </head>
 <div>
 <div class="glow-orb glow-orb-1"></div>
@@ -24,7 +18,9 @@
         <nav>
             <a href="../index.php">Home</a>
             <a href="login.php">Login</a>
+
             <a href="register.php">Register</a>
+
 
         </nav>
     </div>
