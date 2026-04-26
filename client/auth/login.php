@@ -10,7 +10,9 @@ ini_set('display_errors', 1);
 <title>Login - Arca</title>
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo.png">
 <link rel="stylesheet" href="../assets/css/style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div class="glow-orb glow-orb-1"></div>
@@ -21,8 +23,8 @@ ini_set('display_errors', 1);
         <div class="logo"><img src="../assets/img/arca.png" alt="logo"></div>
         <nav>
             <a href="../index.php">Home</a>
-            <a href="">Login</a>
-            <a href="register.html">Register</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
         </nav>
     </div>
 </header>
@@ -47,7 +49,7 @@ ini_set('display_errors', 1);
                 <span class="toggle-pass" data-target="password">show</span>
             </div>
             <button type="submit" name="login">Login</button>
-            <p class="signup-link">Don't have an account? <a href="register.html">Register here</a></p>
+            <p class="signup-link">Don't have an account? <a href="register.php">Register here</a></p>
         </form>
         <p id="error" class="error-msg" style="display: none;"></p>
     </div>

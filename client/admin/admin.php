@@ -23,16 +23,12 @@ $stmt->execute();
 $actor = $stmt->get_result()->fetch_assoc();
 $stmt->close();
 
-<<<<<<< HEAD
 
 $actor = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null;
  
 if (!$actor || $actor !== 'admin_renier') {
-   header("Location: ../pages/dashboard.php");
-=======
-if (!$actor || $actor['user_name'] !== 'admin_renier') {
     header("Location: ../pages/dashboard.php");
->>>>>>> upstream/main
+
     exit();
 }
 $sort  = sanitize_text($_GET['sort'] ?? 'name');

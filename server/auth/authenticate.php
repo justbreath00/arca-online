@@ -13,28 +13,28 @@ if (isset($_POST['signup'])) {
     $user_date = date('Y-m-d');
     
     if (!$email) {
-        redirect_with_msg('../../client/auth/register.html', 'Invalid email format. Use Gmail, Yahoo, Outlook, or Hotmail.');
+        redirect_with_msg('../../client/auth/register.php', 'Invalid email format. Use Gmail, Yahoo, Outlook, or Hotmail.');
     }
 
     
     if ($username === '') {
-        redirect_with_msg('../../client/auth/register.html', 'Username is required.');
+        redirect_with_msg('../../client/auth/register.php', 'Username is required.');
     }
 
     
     if (!is_strong_password($password)) {
-        redirect_with_msg('../../client/auth/register.html', 'Password must be at least 8 characters and contain uppercase, lowercase, and a number.');
+        redirect_with_msg('../../client/auth/register.php', 'Password must be at least 8 characters and contain uppercase, lowercase, and a number.');
     }
 
     
     if ($password !== $confirm) {
-        redirect_with_msg('../../client/auth/register.html', 'Passwords do not match.');
+        redirect_with_msg('../../client/auth/register.php', 'Passwords do not match.');
     }
 
     
     $stmt = $conn->prepare("SELECT user_id FROM users WHERE user_email = ?");
     if (!$stmt) {
-        redirect_with_msg('../../client/auth/register.html', 'Server error. Please try again.');
+        redirect_with_msg('../../client/auth/register.php', 'Server error. Please try again.');
     }
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -42,7 +42,7 @@ if (isset($_POST['signup'])) {
 
     if ($stmt->num_rows > 0) {
         $stmt->close();
-        redirect_with_msg('../../client/auth/register.html', 'Email is already registered.');
+        redirect_with_msg('../../client/auth/register.php', 'Email is already registered.');
     }
     $stmt->close();
 
@@ -51,7 +51,7 @@ if (isset($_POST['signup'])) {
 
     $stmt = $conn->prepare("INSERT INTO users (user_email, user_name, user_password, user_date) VALUES (?, ?, ?,?)");
     if (!$stmt) {
-        redirect_with_msg('../../client/auth/register.html', 'Server error. Please try again.');
+        redirect_with_msg('../../client/auth/register.php', 'Server error. Please try again.');
     }
     $stmt->bind_param("ssss", $email, $username, $hashed_password, $user_date);
 
@@ -66,7 +66,7 @@ if (isset($_POST['signup'])) {
         exit();
     } else {
         $stmt->close();
-        redirect_with_msg('../../client/auth/register.html', 'Signup failed. Please try again.');
+        redirect_with_msg('../../client/auth/register.php', 'Signup failed. Please try again.');
     }
 }
 ?>
