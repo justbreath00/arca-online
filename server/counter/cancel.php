@@ -5,14 +5,14 @@ require_once __DIR__ . '/../../config/connect.php';
 require_once __DIR__ . '/../utils/sanitize.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../../client/auth/login.html");
+    header("Location: ../../client/auth/login.php");
     exit();
 }
 
 $user_id = sanitize_int($_SESSION['user_id']);
 if ($user_id === false) {
     session_destroy();
-    header("Location: ../../client/auth/login.html");
+    header("Location: ../../client/auth/login.php");
     exit();
 }
 

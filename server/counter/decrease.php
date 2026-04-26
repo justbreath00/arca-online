@@ -5,7 +5,7 @@ require_once __DIR__ . '/../../config/connect.php';
 require_once __DIR__ . '/../utils/sanitize.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../../client/auth/login.html");
+    header("Location: ../../client/auth/login.php");
     exit();
 }
 
